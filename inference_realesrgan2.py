@@ -121,8 +121,9 @@ def main():
             if img_mode == 'RGBA':  # RGBA images should be saved in png format
                 extension = 'png'
             save_path = os.path.join(args.output, f'{imgname}_{args.suffix}.{extension}')
-            cv2.imwrite(save_path, output)
+            cv2.imwrite('/content/Real-ESRGAN/result', output)
 
 
 if __name__ == '__main__':
-    main()
+    for file in os.listdir('/content/Real-ESRGAN/upload'):
+        main()
